@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>nextjs กับ nodejs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <style></style>
+  </head>
+  <body>
+    <h1>ทดสอบความสงสัยว่า nextjs กับ nodejs เกี่ยวข้องกันอย่างไร</h1>
+    <ul>
+      <li>
+        พื้นฐาน Web page คือ HTML file โดยเป็น file ที่ Browser สามารถอ่านได้
+      </li>
+      <li>
+        Nodejs ส่วนใหญ่ที่เห็นจะใช้ express library มาช่วยในการจัดการ route
+        ต่างๆรวมหมายถึงการ serve file (res) จาก server
+      </li>
+      <p>ตัวอย่าง</p>
+      <div class="codeBox">
+        <code>
+          <p>// server.js</p>
+          <p>const express = require("express");</p>
+          <p>const app = express();</p>
+          <p>...</p>
+          <p>// sendFile will go here</p>
+          <p>app.get('/', function(req, res) {</p>
+          <p>res.sendFile(path.join(__dirname, '/index.html'));</p>
+          <p>});</p>
+          <p>...</p>
+          <p>app.listen(8080, () => console.log("listen to port 8080"));</p>
+        </code>
+      </div>
+    </ul>
+    <noscript>
+      <!-- anchor linking to external file -->
+      <a href="https://www.mozilla.com/">External Link</a>
+    </noscript>
+  </body>
+</html>
